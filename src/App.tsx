@@ -8,17 +8,17 @@ import NpmLogo from "./assets/npm.svg"
 // import CodeSnippet from "./components/CodeSnippet";
 
 function App() {
-  const [hourValue, setHourValue] = useState("00:00");
-  const [minValue, setMinValue] = useState("00:00");
+  const [starthHourValue, setStartHourValue] = useState("00:00");
+  const [endHourValue, setEndHourValue] = useState("00:00");
   const [is12Hours, setIs12Hours] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const onChangehours = (timeValue: string) => {
-    setHourValue(timeValue);
+    setStartHourValue(timeValue);
   };
 
   const onChangemins = (timeValue: string) => {
-    setMinValue(timeValue);
+    setEndHourValue(timeValue);
   };
 
   const handleDarkModeSwitch = () => {
@@ -106,7 +106,7 @@ function App() {
                 label="Start time"
                 isDarkMode={isDarkMode}
                 onChange={onChangehours}
-                value={hourValue}
+                value={starthHourValue}
               />
             </div>
             <div style={{ width: 150 }}>
@@ -115,7 +115,7 @@ function App() {
                 label="End time"
                 isDarkMode={isDarkMode}
                 onChange={onChangemins}
-                value={minValue}
+                value={endHourValue}
               />
             </div>
           </div>
