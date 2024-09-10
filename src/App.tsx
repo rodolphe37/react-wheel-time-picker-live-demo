@@ -13,11 +13,11 @@ function App() {
   const [is12Hours, setIs12Hours] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const onChangehours = (timeValue: string) => {
+  const onChangeStartHours = (timeValue: string) => {
     setStartHourValue(timeValue);
   };
 
-  const onChangemins = (timeValue: string) => {
+  const onChangeEndHour = (timeValue: string) => {
     setEndHourValue(timeValue);
   };
 
@@ -105,7 +105,7 @@ function App() {
                 use12Hours={is12Hours ? true : false}
                 label="Start time"
                 isDarkMode={isDarkMode}
-                onChange={onChangehours}
+                onChange={onChangeStartHours}
                 value={starthHourValue}
               />
             </div>
@@ -114,7 +114,7 @@ function App() {
                 use12Hours={is12Hours ? true : false}
                 label="End time"
                 isDarkMode={isDarkMode}
-                onChange={onChangemins}
+                onChange={onChangeEndHour}
                 value={endHourValue}
               />
             </div>
