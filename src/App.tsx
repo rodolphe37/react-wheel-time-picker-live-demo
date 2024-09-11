@@ -1,5 +1,6 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
 import "./App.css";
 import { TimePicker } from "react-wheel-time-picker";
 import GithubLogo from "./assets/github.png";
@@ -37,10 +38,11 @@ function App() {
         backgroundColor: isDarkMode ? "#1d1d1d" : "#f6f6f6",
       }}
     >
-      <div
+     <div style={{display:"flex", flexDirection:"row", width:"100%", alignItems: "flex-start", justifyContent:"flex-end", marginRight:20}}>
+     <div
         style={{
           display: "flex",
-          alignItems: "flex-start",
+          alignItems: "center",
 
         }}
       >
@@ -59,6 +61,7 @@ function App() {
           <img className="link_logo" src={NpmLogo} width={40} height={40} />
         </a>
       </div>
+     </div>
       <button
         style={{ backgroundColor: isDarkMode ? "#f6f6f6" : "#e2e2e2" }}
         onClick={handleDarkModeSwitch}
@@ -82,12 +85,14 @@ function App() {
             flexWrap: "wrap",
           }}
         >
-          <img
-            src={reactLogo}
-            width={50}
-            className="logo react"
-            alt="React logo"
-          />
+          <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
           <h1 style={{ fontSize: 22, color: isDarkMode ? "#fff" : "gray" }}>
             react-wheel-time-picker
           </h1>
@@ -99,7 +104,7 @@ function App() {
             justifyContent: "space-around",
             alignItems: "center",
             flexWrap: "wrap",
-            width: "60%",
+            width: "50%",
             marginLeft: -40,
           }}
         >
@@ -147,7 +152,7 @@ function App() {
         </div>
       </div>
 
-      <div style={{ height: 80 }} />
+      <div style={{ height: 120 }} />
     </div>
   );
 }
